@@ -653,6 +653,6 @@ def comp_fragility_reg(duct, Ductility, ims, nIM, nRec):
     FF = fmin(logL, params, args=(ims, num_col['G1'], num_gms))
     mean_G1 = FF[0]
     std_G1 = FF[1]
-    print("Mean and std for G1 are:", np.round(np.exp(FF[0]),3), np.round(std_G1,3))
+    print("Mean and std with MLE are:", np.round(np.exp(FF[0]),3), np.round(std_G1,3))
 
     return mean_G1, std_G1, P_collapse
