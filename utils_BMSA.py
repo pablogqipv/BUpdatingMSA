@@ -276,7 +276,7 @@ def mcmc(num_samples, init_params, iml, z, num_gms, mu_prior, sigma_prior, mu_pr
         # suggest new parameters, this can be any function
         proposal_params = [np.random.normal(np.exp(current_params[0]), ppar_mu),
                            np.random.normal((current_params[1]), ppar_sigma)]
-        lower_bounds = [0.05, 0.05]  # lower bound for the first and second parameter
+        lower_bounds = [0.1, 0.1]  # lower bound for the first and second parameter
         upper_bounds = [2, 1]  # upper bound for the first and second parameter
         proposal_params = np.maximum(proposal_params, lower_bounds)
         proposal_params = np.minimum(proposal_params, upper_bounds)
